@@ -1,0 +1,26 @@
+{
+  "name": "isunglobal-public",
+  "main": "cloudflare-worker.mjs",
+  "compatibility_date": "2026-09-28",
+  "workers_dev": true,
+  "preview_urls": false,
+  "assets": {
+    "directory": "./dist/client",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "not_found_handling": "none"
+  },
+  "observability": {
+    "enabled": false
+  },
+  "routes": [
+    {
+      "pattern": "isunglobal.com/*",
+      "zone_name": "isunglobal.com"
+    },
+    {
+      "pattern": "www.isunglobal.com/*",
+      "zone_name": "isunglobal.com"
+    }
+  ]
+}
